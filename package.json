@@ -1,0 +1,18 @@
+{
+  "name": "monitess",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/api",
+    "apps/dash"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace=apps/api\" \"npm run dev --workspace=apps/dash\"",
+    "build": "npm run build --workspace=apps/api && npm run build --workspace=apps/dash",
+    "start": "npm run start --workspace=apps/api",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

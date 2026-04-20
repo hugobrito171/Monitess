@@ -1,0 +1,16 @@
+{
+  "name": "MONITESS",
+  "short_name": "MONITESS",
+  "description": "Dashboard de monitoramento de servidor em tempo real",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050510",
+  "theme_color": "#6366f1",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

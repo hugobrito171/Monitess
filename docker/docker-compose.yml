@@ -1,0 +1,50 @@
+version: '3.8'
+
+services:
+  monitess:
+    image: monitess:latest
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: monitess
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    volumes:
+      # Mount host filesystem for disk/process monitoring
+      - /:/mnt/host:ro
+      # Mount Docker socket to monitor containers
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+      # Persist SQLite database + config
+      - monitess_data:/data
+    environment:
+      # --- Auth ---
+      # MONITESS_PASSWORD: "your-secure-password"
+      MONITESS_JWT_SECRET: "monitess-change-me-in-production"
+
+      # --- Database ---
+      MONITESS_DATA_DIR: /data
+      MONITESS_RETENTION_DAYS: 30   # dias de histórico de métricas
+
+      # --- Alertas (thresholds em %) ---
+      ALERT_CPU_WARNING: 75
+      ALERT_CPU_CRITICAL: 90
+      ALERT_RAM_WARNING: 80
+      ALERT_RAM_CRITICAL: 92
+      ALERT_TEMP_WARNING: 70
+      ALERT_TEMP_CRITICAL: 85
+      ALERT_DOCKER_CPU: 80
+      ALERT_DOCKER_RAM: 80
+      ALERT_DOCKER_RESTARTS: 5
+
+      NODE_ENV: production
+      PORT: 3001
+
+    privileged: true
+    pid: host
+    network_mode: host
+
+volumes:
+  monitess_data:
+    driver: local
+
