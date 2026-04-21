@@ -12,7 +12,7 @@ docker container run -it \
   -p 80:3001 \
   -v /:/mnt/host:ro \
   --privileged \
-  mauricenino/monitess
+  hugobrito171/monitess
 ```
 
 ## Configuration
@@ -38,6 +38,6 @@ docker container run -it \
   --privileged \
   --gpus all \
   --env MONITESS_WIDGET_LIST="os,cpu,storage,ram,network,gpu" \
-  mauricenino/monitess:nvidia
+  hugobrito171/monitess:nvidia
 ```
 

@@ -1,11 +1,11 @@
-﻿# Contributing
+# Contributing
 
 The simplest way of contributing is to create
-[a new issue](https://github.com/MauriceNino/monitess/issues) using the
+[a new issue](https://github.com/hugobrito171/Monitess/issues) using the
 corresponding templates for feature-requests and bug-reports.
 
 If you are able to, you can also create a
-[pull request](https://github.com/MauriceNino/monitess/pulls) to add the wanted
+[pull request](https://github.com/hugobrito171/Monitess/pulls) to add the wanted
 features or fix the found bug yourself. Any contribution is highly appreciated!
 
 ## Setup
@@ -13,7 +13,7 @@ features or fix the found bug yourself. Any contribution is highly appreciated!
 To start working on this project, run the following series of commands:
 
 ```bash
-git clone https://github.com/MauriceNino/monitess &&\
+git clone https://github.com/hugobrito171/Monitess &&\
   cd monitess &&\
   yarn &&\
   yarn build

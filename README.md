@@ -37,7 +37,7 @@ docker container run -it \
   -p 80:3001 \
   -v /:/mnt/host:ro \
   --privileged \
-  mauricenino/monitess
+  hugobrito171/monitess
 ```
 
 > **Note:** The `-v /:/mnt/host:ro` and `--privileged` flags are required for Monitess to access system information correctly from within the container.
@@ -49,7 +49,7 @@ version: '3.8'
 
 services:
   monitess:
-    image: mauricenino/monitess
+    image: hugobrito171/monitess
     container_name: monitess
     ports:
       - '80:3001'
@@ -73,7 +73,7 @@ Monitess is configured via environment variables. Here are some common options:
 | `MONITESS_PAGE_TITLE` | The title of the dashboard page. | `monitess.` |
 | `MONITESS_USE_IMPERIAL` | Use imperial units (Fahrenheit, etc.). | `false` |
 
-For a full list of configuration options, check the [official documentation](https://getmonitess.com/docs/configuration).
+For a full list of configuration options, check the [official documentation](https://github.com/hugobrito171/Monitess#readme).
 
 ---
 
@@ -83,7 +83,7 @@ If you prefer to run it manually, ensure you have **Node.js 20+** and **Yarn 4**
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/MauriceNino/monitess.git
+   git clone https://github.com/hugobrito171/Monitess.git
    cd monitess
    ```
 
@@ -109,13 +109,8 @@ If you prefer to run it manually, ensure you have **Node.js 20+** and **Yarn 4**
 
 Monitess is released under the [MIT License](LICENSE.md).
 
-## 💬 Community
-
-- **Discord**: [Join our community](https://discord.gg/S7YmU3B)
-- **GitHub**: [Report Bugs & Request Features](https://github.com/MauriceNino/monitess/issues)
-
 ---
 
 <p align="center">
-  Made with ❤️ by <a href="https://github.com/MauriceNino">Maurice Nino</a> and contributors.
+  Made with ❤️ by <a href="https://github.com/hugobrito171">Tessurion</a> and contributors.
 </p>

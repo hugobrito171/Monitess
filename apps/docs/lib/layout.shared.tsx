@@ -1,10 +1,10 @@
-﻿import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
+import type { BaseLayoutProps } from 'fumadocs-ui/layouts/shared';
 import Image from 'next/image';
 
 // fill this with your actual GitHub info, for example:
 export const gitConfig = {
-  user: 'MauriceNino',
-  repo: 'monitess',
+  user: 'hugobrito171',
+  repo: 'Monitess',
   branch: 'main',
 };
 
@@ -19,7 +19,7 @@ export function baseOptions(): BaseLayoutProps {
             width={20}
             height={20}
           />
-          <span>Dash.</span>
+          <span>Monitess.</span>
         </div>
       ),
     },

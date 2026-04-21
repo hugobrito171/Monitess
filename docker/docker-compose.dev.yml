@@ -2,7 +2,7 @@
 # This is a docker-compose file used ONLY for the dev environment and can not be used for production.
 # If you need instructions on how to run monitess, please have a look at the README.md file in the root of the project.
 services:
-  dash:
+  monitess:
     build:
       context: ..
       dockerfile: ./docker/Dockerfile

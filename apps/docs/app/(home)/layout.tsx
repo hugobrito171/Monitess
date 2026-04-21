@@ -1,4 +1,4 @@
-﻿import { HomeLayout } from 'fumadocs-ui/layouts/home';
+import { HomeLayout } from 'fumadocs-ui/layouts/home';
 import { baseOptions } from '@/lib/layout.shared';
 
 export default function Layout({ children }: LayoutProps<'/'>) {
@@ -7,9 +7,7 @@ export default function Layout({ children }: LayoutProps<'/'>) {
       {...baseOptions()}
       links={[
         { url: '/docs', text: 'Documentation' },
-        { url: `https://discord.gg/3teHFBNQ9W`, text: 'Discord' },
-        { url: 'https://monitess.mauz.dev', text: 'Demo' },
-        { url: 'https://ko-fi.com/mauricenino', text: 'Ko-Fi' },
+        { url: 'https://github.com/hugobrito171/Monitess', text: 'GitHub' },
       ]}
     >
       {children}

@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  monitess:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    container_name: monitess
+    restart: unless-stopped
+    privileged: true
+    ports:
+      - '80:3001'
+    volumes:
+      - /:/mnt/host:ro
+    environment:
+      - MONITESS_PAGE_TITLE=Monitess Dashboard
+      - MONITESS_ENABLE_CPU_TEMPS=true
+      - MONITESS_WIDGET_LIST=os,cpu,storage,ram,network

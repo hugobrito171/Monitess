@@ -1,4 +1,4 @@
-﻿/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import type { StorageInfo, StorageLoad } from '@monitess/common';
 import type * as si from 'systeminformation';
 
@@ -10,7 +10,7 @@ export type TestCase = {
   output: StorageLoad;
 };
 
-// https://github.com/MauriceNino/monitess/issues/514
+// https://github.com/hugobrito171/Monitess/issues/514
 export const TEST_CASE_14 = {
   disks: [
     {
@@ -667,7 +667,7 @@ export const TEST_CASE_16 = {
   output: [178161021440, 880474608128, 606456525312],
 } as any as TestCase;
 
-// https://github.com/MauriceNino/monitess/issues/594
+// https://github.com/hugobrito171/Monitess/issues/594
 export const TEST_CASE_17 = {
   disks: [
     {
@@ -2896,7 +2896,7 @@ export const TEST_CASE_20 = {
   output: [-1, 20198055936, 1478133694464],
 } as any as TestCase;
 
-// https://github.com/MauriceNino/monitess/issues/883
+// https://github.com/hugobrito171/Monitess/issues/883
 export const TEST_CASE_21 = {
   disks: [
     {
@@ -3227,7 +3227,7 @@ export const TEST_CASE_21 = {
 } as any as TestCase;
 
 // Currently somewhat incorrect due to BTRFS Raid not correctly supported
-// https://github.com/MauriceNino/monitess/issues/980
+// https://github.com/hugobrito171/Monitess/issues/980
 export const TEST_CASE_22 = {
   disks: [
     {
@@ -4129,7 +4129,7 @@ export const TEST_CASE_24 = {
   output: [11911135232],
 } as any as TestCase;
 
-// https://github.com/MauriceNino/monitess/issues/1008#issuecomment-1898024021
+// https://github.com/hugobrito171/Monitess/issues/1008#issuecomment-1898024021
 export const TEST_CASE_25 = {
   disks: [
     {

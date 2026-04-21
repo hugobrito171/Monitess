@@ -2,8 +2,8 @@
 # This is a docker-compose file used ONLY for the dev environment and can not be used for production.
 # If you need instructions on how to run monitess, please have a look at the README.md file in the root of the project.
 services:
-  dash:
-    # image: mauricenino/monitess:dev
+  monitess:
+    # image: hugobrito171/monitess:dev
     build:
       context: ..
       dockerfile: ./docker/Dockerfile
@@ -21,7 +21,7 @@ services:
       - /:/mnt/host:ro
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.monitess.rule=Host(`dash-dev.com`)" # for this to work, you will have to add an entry to /etc/hosts
+      - "traefik.http.routers.monitess.rule=Host(`monitess-dev.com`)" # for this to work, you will have to add an entry to /etc/hosts
 
   traefik:
     image: traefik

@@ -177,7 +177,7 @@ export default {
         using MONITESS_SPEED_TEST_FROM_PATH.
   
         For more help on how to setup monitess, look here:
-        https://getmonitess.com/docs/installation/from-source
+        https://github.com/hugobrito171/Monitess#readme
       `);
     }
 

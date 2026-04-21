@@ -4,11 +4,11 @@
   "description": "monitess. - a modern server dashboard",
   "license": "MIT",
   "private": true,
-  "repository": "https://github.com/MauriceNino/monitess",
-  "homepage": "https://getmonitess.com",
-  "author": "MauriceNino <mauriceprivat98@gmail.com>",
+  "repository": "https://github.com/hugobrito171/Monitess",
+  "homepage": "https://github.com/hugobrito171/Monitess",
+  "author": "Tessurion",
   "bugs": {
-    "url": "https://github.com/MauriceNino/monitess/issues"
+    "url": "https://github.com/hugobrito171/Monitess/issues"
   },
   "keywords": [
     "monitoring",
@@ -102,7 +102,7 @@
       [
         "@semantic-release/github",
         {
-          "successComment": ":tada: This issue has been resolved in version ${nextRelease.version}\n\nPlease check the [changelog](https://github.com/MauriceNino/monitess/blob/main/.github/CHANGELOG.md) for more details.",
+          "successComment": ":tada: This issue has been resolved in version ${nextRelease.version}\n\nPlease check the [changelog](https://github.com/hugobrito171/Monitess/blob/main/.github/CHANGELOG.md) for more details.",
           "successCommentCondition": "<% return issue.user.type !== 'Bot'; %>",
           "failComment": false,
           "failTitle": false,

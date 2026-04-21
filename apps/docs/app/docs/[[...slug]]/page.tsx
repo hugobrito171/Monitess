@@ -57,7 +57,7 @@ export async function generateMetadata(
   if (!page) notFound();
 
   return {
-    metadataBase: new URL('https://getmonitess.com'),
+    metadataBase: new URL('https://github.com/hugobrito171/Monitess'),
     title: page.data.title,
     description: page.data.description,
     openGraph: {
