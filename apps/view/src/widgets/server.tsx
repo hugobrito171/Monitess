@@ -1,10 +1,9 @@
-﻿import type { Config, OsInfo, Transient } from '@monitess/common';
+import type { Config, OsInfo, Transient } from '@monitess/common';
 import {
   faApple,
   faCentos,
   faDebian,
   faFedora,
-  faGithub,
   faLinux,
   faRedhat,
   faSuse,
@@ -205,30 +204,8 @@ export const ServerWidget: FC<ServerWidgetProps> = ({ data, config }) => {
   const platform = data.platform;
   const os = override.os ?? `${distro} ${data.release}`;
   const arch = override.arch ?? data.arch;
-
-  const ghBtn = (
-    <Link
-      ghost
-      shape="circle"
-      icon={<FontAwesomeIcon icon={faGithub} />}
-      href="https://github.com/MauriceNino/monitess"
-      target="_blank"
-      aria-label="GitHub Link"
-    />
-  );
-
   return (
     <Container>
-      <ButtonsContainer>
-        {config.show_dash_version === 'icon_hover' ? (
-          <Tooltip placement="right" title={data.dash_version}>
-            {ghBtn}
-          </Tooltip>
-        ) : (
-          ghBtn
-        )}
-      </ButtonsContainer>
-
       <WidgetSwitch
         label="Dark Mode"
         checked={darkMode}

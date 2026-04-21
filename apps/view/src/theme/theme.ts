@@ -21,40 +21,40 @@ type Theme = {
 const lightTheme: Theme = {
   dark: false,
   colors: {
-    primary: '#5ee2ff',
-    secondary: '#f5a4e3',
-    error: '#f44336',
+    primary: '#0ea5e9',
+    secondary: '#64748b',
+    error: '#ef4444',
 
-    surface: '#fafafa',
-    background: '#d9d9d9',
+    surface: '#ffffff',
+    background: '#f8fafc',
 
-    text: '#404040',
+    text: '#0f172a',
 
-    cpuPrimary: '#52d7ff',
-    ramPrimary: '#ff526f',
-    storagePrimary: '#49e37a',
-    networkPrimary: '#ffd745',
-    gpuPrimary: '#c97bff',
+    cpuPrimary: '#06b6d4',
+    ramPrimary: '#f43f5e',
+    storagePrimary: '#10b981',
+    networkPrimary: '#f59e0b',
+    gpuPrimary: '#8b5cf6',
   },
 };
 
 const darkTheme: Theme = {
   dark: true,
   colors: {
-    primary: '#775a9e',
-    secondary: '#434047',
-    error: lightTheme.colors.error,
+    primary: '#38bdf8',
+    secondary: '#94a3b8',
+    error: '#f87171',
 
-    surface: '#212121',
-    background: '#4f4f4f',
+    surface: '#1e293b',
+    background: '#0f172a',
 
-    text: '#fafafa',
+    text: '#f8fafc',
 
-    cpuPrimary: '#2259b3',
-    ramPrimary: '#c43148',
-    storagePrimary: '#22b352',
-    networkPrimary: '#e9c235',
-    gpuPrimary: '#a135eb',
+    cpuPrimary: '#22d3ee',
+    ramPrimary: '#fb7185',
+    storagePrimary: '#34d399',
+    networkPrimary: '#fbbf24',
+    gpuPrimary: '#a78bfa',
   },
 };
 

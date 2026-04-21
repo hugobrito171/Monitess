@@ -14,39 +14,17 @@ import { useSetting } from './services/settings';
 import { darkTheme, lightTheme } from './theme/theme';
 
 const getLightGradient = (theme: DefaultTheme) => `
-radial-gradient(
-  circle at 10% 10%,
-  ${theme.colors.secondary}66 10%,
-  transparent 10.2%
-),
-radial-gradient(circle at 10% 10%, #ffffff 10%, transparent 10.2%),
-radial-gradient(
-  circle at 90% 85%,
-  ${theme.colors.primary}66 20%,
-  transparent 20.2%
-),
-radial-gradient(circle at 90% 85%, white 20%, transparent 20.2%),
 linear-gradient(
-  200deg,
-  ${theme.colors.primary} 0%,
-  ${theme.colors.secondary} 60%
+  225deg,
+  #f1f5f9 0%,
+  ${theme.colors.background} 100%
 )`;
 
 const getDarkGradient = (theme: DefaultTheme) => `
-radial-gradient(
-  circle at 10% 10%,
-  ${theme.colors.primary} 10%,
-  transparent 10.5%
-),
-radial-gradient(
-  circle at 110% 90%,
-  ${theme.colors.secondary} 30%,
-  transparent 30.5%
-),
 linear-gradient(
-  290deg,
-  ${theme.colors.primary} 0%,
-  ${theme.colors.secondary} 40%
+  160deg,
+  #1e293b 0%,
+  ${theme.colors.background} 100%
 )`;
 
 const GlobalStyle = createGlobalStyle<{ noBg: boolean }>`
