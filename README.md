@@ -57,7 +57,7 @@ Para apoiar financeiramente, visite o
 
 | Modo Escuro                                                                                  | Modo Claro                                                                                      |
 | -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
-| <img src="apps/docs/static/img/screenshot_darkmode.png" alt="Screenshot modo escuro" /> | <img src="apps/docs/static/img/screenshot_lightmode.png" alt="Screenshot modo claro" /> |
+| <img src="apps/docs/public/img/screenshot_darkmode.png" alt="Screenshot modo escuro" /> | <img src="apps/docs/public/img/screenshot_lightmode.png" alt="Screenshot modo claro" /> |
 
 <!-- markdownlint-enable -->
 
