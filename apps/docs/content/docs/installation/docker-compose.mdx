@@ -1,4 +1,4 @@
-﻿---
+---
 title: Docker-Compose
 description: How to install and configure monitess. using docker-compose
 tags:
@@ -12,7 +12,7 @@ tags:
 version: '3.5'
 
 services:
-  dash:
+  Monitess:
     image: mauricenino/monitess:latest
     restart: unless-stopped
     privileged: true
@@ -28,9 +28,9 @@ Config options can optionally set, by using the [environment](https://docs.docke
 
 ```yaml
 services:
-  dash:
+  Monitess:
     environment:
-      DASHDOT_ENABLE_CPU_TEMPS: 'true'
+      MONITESS_ENABLE_CPU_TEMPS: 'true'
     # ...
 ```
 
@@ -42,7 +42,7 @@ GPU support is available with another image tag and a slightly different config.
 version: '3.5'
 
 services:
-  dash:
+  Monitess:
     image: mauricenino/monitess:nvidia
     restart: unless-stopped
     privileged: true
@@ -57,5 +57,6 @@ services:
     volumes:
       - /:/mnt/host:ro
     environment:
-      DASHDOT_WIDGET_LIST: 'os,cpu,storage,ram,network,gpu'
+      MONITESS_WIDGET_LIST: 'os,cpu,storage,ram,network,gpu'
 ```
+

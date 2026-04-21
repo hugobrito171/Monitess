@@ -3,8 +3,8 @@ FROM node:20-alpine AS base
 
 WORKDIR /app
 ARG TARGETPLATFORM
-ENV DASHDOT_IMAGE=base
-ENV DASHDOT_RUNNING_IN_DOCKER=true
+ENV MONITESS_IMAGE=base
+ENV MONITESS_RUNNING_IN_DOCKER=true
 
 RUN \
   /bin/echo ">> installing dependencies" &&\

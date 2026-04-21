@@ -1,4 +1,4 @@
-﻿import type { Config } from '@monitess/common';
+import type { Config } from '@monitess/common';
 
 const numNull = (val: string | undefined): number | undefined => {
   if (val === undefined || val === '') {
@@ -7,7 +7,7 @@ const numNull = (val: string | undefined): number | undefined => {
   return +val;
 };
 
-const penv = (key: string): string | undefined => process.env[`DASHDOT_${key}`];
+const penv = (key: string): string | undefined => process.env[`MONITESS_${key}`];
 const lst = (item: string): string[] => (item === '' ? [] : item.split(','));
 const numlst = (item: string): number[] => lst(item).map((item) => +item);
 const kv = <T extends boolean>(

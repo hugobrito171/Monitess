@@ -1,4 +1,4 @@
-﻿---
+---
 title: From Source
 description: How to install and configure monitess. from source
 tags:
@@ -53,7 +53,7 @@ git clone https://github.com/MauriceNino/monitess ^
 <Step>
 ## Start
 
-When done, you can run the dashboard by executing:
+When done, you can run the Monitessboard by executing:
 
 
 <Tabs items={['Linux', 'Windows (Cmd)']} groupId="os">
@@ -78,7 +78,7 @@ yarn start
 <Callout title="Note" type="info">
 
 In case you get a speedtest related error, you might have to accept the license
-before being able to start your dashboard.
+before being able to start your Monitessboard.
 
 For this, run the following in your terminal:
 
@@ -97,7 +97,7 @@ Config options can optionally passed using environment variables.
   <Tab value='Linux'>
 
 ```bash
-export DASHDOT_PORT="8080" \
+export MONITESS_PORT="8080" \
   && sudo -E yarn start
 ```
 
@@ -105,7 +105,7 @@ export DASHDOT_PORT="8080" \
   <Tab value='Windows (Cmd)'>
 
 ```bash
-set DASHDOT_PORT=8080 ^
+set MONITESS_PORT=8080 ^
   && yarn start
 ```
 
@@ -115,7 +115,7 @@ set DASHDOT_PORT=8080 ^
 <Step>
 ## Update
 
-You can update your Dash. instance, by stopping your instance, then
+You can update your Monitess instance, by stopping your instance, then
 running the following commands and in the end, restart your instance.
 
 

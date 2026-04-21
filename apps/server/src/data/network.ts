@@ -1,4 +1,4 @@
-﻿import { exec as cexec } from 'node:child_process';
+import { exec as cexec } from 'node:child_process';
 import fs from 'node:fs';
 import { promisify } from 'node:util';
 import { capFirst, type NetworkInfo, type NetworkLoad } from '@monitess/common';
@@ -174,7 +174,7 @@ export default {
         - speedtest-cli: https://github.com/sivel/speedtest-cli
 
         Or alternatively, provide a local file with speedtest results,
-        using DASHDOT_SPEEDTEST_FROM_PATH.
+        using MONITESS_SPEED_TEST_FROM_PATH.
   
         For more help on how to setup monitess, look here:
         https://getmonitess.com/docs/installation/from-source

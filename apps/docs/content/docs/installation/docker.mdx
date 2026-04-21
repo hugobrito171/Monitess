@@ -1,4 +1,4 @@
-﻿---
+---
 title: Docker
 description: How to install and configure monitess. using docker
 tags:
@@ -23,7 +23,7 @@ flag.
 
 ```bash
 docker container run -it \
-  --env DASHDOT_ENABLE_CPU_TEMPS="true" \
+  --env MONITESS_ENABLE_CPU_TEMPS="true" \
   # ...
 ```
 
@@ -37,6 +37,7 @@ docker container run -it \
   -v /:/mnt/host:ro \
   --privileged \
   --gpus all \
-  --env DASHDOT_WIDGET_LIST="os,cpu,storage,ram,network,gpu" \
+  --env MONITESS_WIDGET_LIST="os,cpu,storage,ram,network,gpu" \
   mauricenino/monitess:nvidia
 ```
+

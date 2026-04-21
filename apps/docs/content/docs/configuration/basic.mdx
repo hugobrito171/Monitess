@@ -1,13 +1,13 @@
-﻿---
+---
 title: Basic
 tags:
   - Configuration
   - Styles
 ---
 
-## `DASHDOT_WIDGET_LIST`
+## `MONITESS_WIDGET_LIST`
 
-Selects which widgets to show on the dashboard.
+Selects which widgets to show on the Monitessboard.
 
 The available options are: `os`, `cpu`, `storage`, `ram`, `network`, `gpu`.
 
@@ -16,16 +16,16 @@ The available options are: `os`, `cpu`, `storage`, `ram`, `network`, `gpu`.
 
 | `os,cpu,storage,ram,network`                               | `ram,cpu,storage,network`                                                     |
 | ---------------------------------------------------------- | ----------------------------------------------------------------------------- |
-| ![Dashboard in normal order](/img/screenshot_darkmode.png) | ![Dashboard in alternate order](/img/screenshot_darkmode_alternate_order.png) |
+| ![Monitessboard in normal order](/img/screenshot_darkmode.png) | ![Monitessboard in alternate order](/img/screenshot_darkmode_alternate_order.png) |
 
-## `DASHDOT_PORT`
+## `MONITESS_PORT`
 
 The port where the express backend is running (the backend serves the frontend, so it is the same port for both).
 
 - type: `number`
 - default: `3001`
 
-## `DASHDOT_ROUTING_PATH`
+## `MONITESS_ROUTING_PATH`
 
 The path where monitess. is being served. This is useful if you want to run monitess. behind a reverse proxy on a sub-path
 (e.g `https://example.com/monitess` would need a value of `/monitess`).
@@ -33,28 +33,28 @@ The path where monitess. is being served. This is useful if you want to run moni
 - type: `string`
 - default: `/`
 
-## `DASHDOT_PAGE_TITLE`
+## `MONITESS_PAGE_TITLE`
 
 If you want to show a custom string in the browser page title.
 
 - type: `string`
 - default: `monitess.`
 
-## `DASHDOT_DISABLE_INTEGRATIONS`
+## `MONITESS_DISABLE_INTEGRATIONS`
 
 Disables support for integrations. This does two things: disable CORS and disable open API endpoints.
 
 - type: `boolean`
 - default: `false`
 
-## `DASHDOT_DISABLE_BACKGROUND_STATS_COLLECTION`
+## `MONITESS_DISABLE_BACKGROUND_STATS_COLLECTION`
 
 Disables background collection of metrics.
 
 - type: `boolean`
 - default: `false`
 
-## `DASHDOT_SHOW_DASH_VERSION`
+## `MONITESS_SHOW_Monitess_VERSION`
 
 If you want to show the version number of your monitess. instance on the bottom right of the page, or alternatively on the GitHub icon (hover).
 
@@ -65,9 +65,9 @@ The available options are: `bottom_right`, `icon_hover` and `none`.
 
 | `bottom_right`                                                                                            | `icon_hover`                                                                                                      |
 | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| ![Dash. version bottom right](/img/version_bottom_right.png) | ![Dash. version on GitHub icon hover](/img/version_server_hover.png) |
+| ![Monitess version bottom right](/img/version_bottom_right.png) | ![Monitess version on GitHub icon hover](/img/version_server_hover.png) |
 
-## `DASHDOT_USE_IMPERIAL`
+## `MONITESS_USE_IMPERIAL`
 
 Shows any units in the imperial system, instead of the default metric.
 
@@ -78,7 +78,7 @@ Shows any units in the imperial system, instead of the default metric.
 | --------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------- |
 | ![CPU widget with temps in celsius](/img/cpu_view_temps.png) | ![CPU widget with temps in fahrenheit](/img/cpu_view_temps_fahrenheit.png) |
 
-## `DASHDOT_ALWAYS_SHOW_PERCENTAGES`
+## `MONITESS_ALWAYS_SHOW_PERCENTAGES`
 
 To always show the current percentage of each graph in the top-left corner. Without enabling this,
 they will only be shown on lower resolution devices (mobile phones).
@@ -88,4 +88,5 @@ they will only be shown on lower resolution devices (mobile phones).
 
 | `false`                                                                                                      | `true`                                                                                                             |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| ![Dashboard iwith no percentages](/img/screenshot_darkmode.png) | ![Dashboard with percentages](/img/screenshot_darkmode_with_perc.png) |
+| ![Monitessboard iwith no percentages](/img/screenshot_darkmode.png) | ![Monitessboard with percentages](/img/screenshot_darkmode_with_perc.png) |
+

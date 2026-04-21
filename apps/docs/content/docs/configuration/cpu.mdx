@@ -1,4 +1,4 @@
-﻿---
+---
 title: CPU
 tags:
   - Configuration
@@ -7,7 +7,7 @@ tags:
 
 ## Options
 
-### `DASHDOT_CPU_LABEL_LIST`
+### `MONITESS_CPU_LABEL_LIST`
 
 Selects which data is shown in the CPU widget.
 
@@ -16,7 +16,7 @@ The available options are: `brand`, `model`, `cores`, `threads`, `frequency`.
 - type: `string (comma separated list)`
 - default: `brand,model,cores,threads,frequency`
 
-### `DASHDOT_ENABLE_CPU_TEMPS`
+### `MONITESS_ENABLE_CPU_TEMPS`
 
 If you want to show the CPU temperature in the graph.
 This will probably not work on a VPS, so you need to try it on your own if this works.
@@ -31,23 +31,23 @@ For home servers it might work just fine.
 
 <Callout title="Note" type="info">
 If you want to show the data using imperial units, you need to set the
-[`DASHDOT_USE_IMPERIAL`](./basic#monitess_use_imperial) option to `true`.
+[`MONITESS_USE_IMPERIAL`](./basic#monitess_use_imperial) option to `true`.
 </Callout>
 
-### `DASHDOT_CPU_TEMPS_MODE`
+### `MONITESS_CPU_TEMPS_MODE`
 
-To choose between average and max CPU temperature (accross all cores). Needs [`DASHDOT_ENABLE_CPU_TEMPS`](./cpu#monitess_enable_cpu_temps) enabled to work.
+To choose between average and max CPU temperature (accross all cores). Needs [`MONITESS_ENABLE_CPU_TEMPS`](./cpu#monitess_enable_cpu_temps) enabled to work.
 
 The available options are: `avg`, `max`.
 
 - type: `string`
 - default: `avg`
 
-### `DASHDOT_CPU_CORES_TOGGLE_MODE`
+### `MONITESS_CPU_CORES_TOGGLE_MODE`
 
 Switches the Processor core view depending on the selected option. The `toggle`
-option allows you to switch the view from the dashboard, other options hide the
-toggle from the dashboard.
+option allows you to switch the view from the Monitessboard, other options hide the
+toggle from the Monitessboard.
 
 The available options are: `toggle`, `multi-core`, `average`.
 
@@ -56,28 +56,28 @@ The available options are: `toggle`, `multi-core`, `average`.
 
 ## Styles
 
-### `DASHDOT_CPU_WIDGET_GROW`
+### `MONITESS_CPU_WIDGET_GROW`
 
 To adjust the relative size of the Processor widget.
 
 - type: `number`
 - default: `4`
 
-### `DASHDOT_CPU_WIDGET_MIN_WIDTH`
+### `MONITESS_CPU_WIDGET_MIN_WIDTH`
 
 To adjust the minimum width of the Processor widget (in px).
 
 - type: `number`
 - default: `500`
 
-### `DASHDOT_CPU_SHOWN_DATAPOINTS`
+### `MONITESS_CPU_SHOWN_DATAPOINTS`
 
 The amount of datapoints in the Processor graph.
 
 - type: `number`
 - default: `20`
 
-### `DASHDOT_CPU_POLL_INTERVAL`
+### `MONITESS_CPU_POLL_INTERVAL`
 
 Read the Processor load every x milliseconds.
 
@@ -90,29 +90,30 @@ You can use overrides to manually set statically gathered data. This is useful
 if you want to use monitess on a VPS or a system where the data cannot be
 gathered automatically.
 
-### `DASHDOT_OVERRIDE_CPU_BRAND`
+### `MONITESS_OVERRIDE_CPU_BRAND`
 
 - type: `string`
 - default: `unset`
 
-### `DASHDOT_OVERRIDE_CPU_MODEL`
+### `MONITESS_OVERRIDE_CPU_MODEL`
 
 - type: `string`
 - default: `unset`
 
-### `DASHDOT_OVERRIDE_CPU_CORES`
+### `MONITESS_OVERRIDE_CPU_CORES`
 
 - type: `number`
 - default: `unset`
 
-### `DASHDOT_OVERRIDE_CPU_THREADS`
+### `MONITESS_OVERRIDE_CPU_THREADS`
 
 - type: `number`
 - default: `unset`
 
-### `DASHDOT_OVERRIDE_CPU_FREQUENCY`
+### `MONITESS_OVERRIDE_CPU_FREQUENCY`
 
 Number needs to be passed in GHz (e.g. `2.8`)
 
 - type: `number`
 - default: `unset`
+
