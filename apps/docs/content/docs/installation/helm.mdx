@@ -1,0 +1,71 @@
+﻿---
+title: Helm Chart
+description: How to install monitess using helm chart
+tags:
+  - Installation
+  - Configuration
+  - Helm
+---
+
+## Installation using Helm
+
+Helm is a package manager for Kubernetes, easing deployment of applications like Monitess. The Helm chart for Monitess simplifies its deployment on any supported platform by Kubernetes, enabling efficient scaling and management.
+
+### Prerequisites
+
+- [Helm](https://helm.sh/docs/intro/install/)
+
+### Installation
+
+To install Monitess using Helm chart, please follow this steps.
+
+{/* <Tabs>
+  <TabItem value="orange" label="OCI (Recommended)" default>
+
+    helm install monitess oci://ghcr.io/oben01/charts/monitess
+
+  </TabItem>
+  <TabItem value="apple" label="Traditional">
+
+    helm repo add oben01 https://oben01.github.io/charts/
+    helm repo update
+    helm install monitess oben01/monitess
+
+  </TabItem>
+</Tabs> */}
+
+#### Example using override values:
+
+```bash
+helm upgrade --install monitess oci://ghcr.io/oben01/charts/monitess --namespace monitess --create-namespace -f override.yaml
+```
+
+```yml title="override.yaml"
+ingress:
+  enabled: true
+  className: 'traefik'
+  annotations:
+  # Add any additional annotations as needed
+  hosts:
+    - host: monitess.homelab.dev
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - hosts:
+        - 'monitess.homelab.dev'
+        - 'www.monitess.homelab.dev'
+      secretName: homelab-dev-tls
+```
+
+All available values are listed on the [artifacthub](https://artifacthub.io/packages/helm/oben01/monitess?modal=values). If you find any issue please open an issue on [github](https://github.com/oben01/charts/issues/new?assignees=oben01&labels=bug&template=bug_report.yaml&name=monitess)
+
+## Uninstalling the Chart
+
+To uninstall the `Monitess` deployment
+
+```bash
+helm uninstall monitess
+```
+
+The command removes all the Kubernetes components associated with the chart including persistent volumes and deletes the release.
