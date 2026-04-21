@@ -1,11 +1,11 @@
 ﻿<!-- markdownlint-disable -->
 <h1>
-  <img src=".github/images/banner_muted.png" alt="monitess. - a modern server dashboard">
+  <img src=".github/images/banner_muted.png" alt="monitess. - Dashboard Moderno para Servidores">
 </h1>
 
 <p align="center">
-  <a href="https://github.com/MauriceNino/monitess/actions/workflows/deploy.yaml?branch=main" target="_blank">
-    <img title="GitHub Actions" src="https://github.com/MauriceNino/monitess/actions/workflows/deploy.yaml/badge.svg?branch=main">
+  <a href="https://github.com/hugobrito171/Monitess/actions/workflows/deploy.yaml?branch=main" target="_blank">
+    <img title="GitHub Actions" src="https://github.com/hugobrito171/Monitess/actions/workflows/deploy.yaml/badge.svg?branch=main">
   </a>
 
   <a href="https://discord.gg/3teHFBNQ9W" target="_blank">
@@ -13,21 +13,21 @@
   </a>
 </p>
 <p align="center">
-  <i>Feel free to join the <b>Discord</b> and <b>star the repo</b> if you like the project!</i>
+  <i>Junte-se ao <b>Discord</b> e dê uma <b>estrela</b> no repositório se gostar do projeto!</i>
 </p>
 
 <br/>
 
 <p align="center">
-  <b>monitess.</b> (or <b>monitess</b>) is a modern server dashboard,
-  running on the latest tech, designed with glassmorphism in mind.
-  It is intended to be used for smaller VPS and private servers.
+  <b>monitess.</b> é um dashboard moderno para servidores,
+  construído com as tecnologias mais recentes e design com efeito vidro (glassmorphism).
+  Projetado para VPS e servidores privados menores.
 </p>
 <br />
 <p align="center">
-  <a href="https://monitess.mauz.dev" target="_blank">Live Demo</a>
+  <a href="https://monitess.mauz.dev" target="_blank">Demo Online</a>
  |
-  <a href="https://hub.docker.com/r/mauricenino/monitess" target="_blank">Docker Image</a>
+  <a href="https://hub.docker.com/r/mauricenino/monitess" target="_blank">Imagem Docker</a>
 </p>
 
 #
@@ -37,41 +37,41 @@
     align="right"
     width="160"
     style="padding-left: 20px; padding-bottom: 10px"
-    alt="Consider sponsoring the development of this project"
+    alt="Apoie o desenvolvimento deste projeto"
     src="https://cdn.ko-fi.com/cdn/kofi2.png?v=3"
   />
 </a>
 
 <!-- markdownlint-enable -->
 
-**monitess.** is a open-source project, so any contribution is highly appreciated.
-If you are interested in further developing this project, have a look at the
-[Contributing.md](./.github/CONTRIBUTING.md).
+**monitess.** é um projeto open-source, qualquer contribuição é muito bem-vinda.
+Se você tem interesse em desenvolver este projeto, dê uma olhada no
+[CONTRIBUTING.md](./.github/CONTRIBUTING.md).
 
-In case you want to financially support this project, you can visit my
-[GitHub Sponsors](https://github.com/sponsors/MauriceNino), or my [Ko-Fi](https://ko-fi.com/mauricenino).
+Para apoiar financeiramente, visite o
+[GitHub Sponsors](https://github.com/sponsors/MauriceNino) ou [Ko-Fi](https://ko-fi.com/mauricenino).
 
 ## Preview
 
 <!-- markdownlint-disable -->
 
-| Dark-Mode                                                                                    | Light-Mode                                                                                     |
-| -------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
-| <img src="apps/docs/static/img/screenshot_darkmode.png" alt="Screenshot of the dark-mode" /> | <img src="apps/docs/static/img/screenshot_lightmode.png" alt="Screenshot of the light-mode" /> |
+| Modo Escuro                                                                                  | Modo Claro                                                                                      |
+| -------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- |
+| <img src="apps/docs/static/img/screenshot_darkmode.png" alt="Screenshot modo escuro" /> | <img src="apps/docs/static/img/screenshot_lightmode.png" alt="Screenshot modo claro" /> |
 
 <!-- markdownlint-enable -->
 
-## Documentation
+## Documentação
 
-- [Installation Options](https://getmonitess.com/docs/installation/docker)
-- [Configuration Options](https://getmonitess.com/docs/configuration/basic)
-- [Contributing](./.github/CONTRIBUTING.md)
+- [Opções de Instalação](https://getmonitess.com/docs/installation/docker)
+- [Opções de Configuração](https://getmonitess.com/docs/configuration/basic)
+- [Contribuindo](./.github/CONTRIBUTING.md)
 - [Changelog](./.github/CHANGELOG.md)
 
-## Quick Install (Docker)
+## Instalação Rápida (Docker)
 
-Images are hosted on [DockerHub](https://hub.docker.com/r/mauricenino/monitess),
-and are available for both AMD64 and ARM devices.
+As imagens estão hospedadas no [DockerHub](https://hub.docker.com/r/mauricenino/monitess),
+disponíveis para AMD64 e ARM.
 
 ```bash
 docker container run -it \
@@ -81,20 +81,20 @@ docker container run -it \
   mauricenino/monitess
 ```
 
-To get more information on why which flag is needed, or if you want to use other
-install options instead (`docker-compose`, or from source), have a look at the
-[installation options](https://getmonitess.com/docs/installation/docker).
+Para mais informações sobre flags ou outras opções de instalação
+(`docker-compose`, ou compilação do código-fonte), veja as
+[opções de instalação](https://getmonitess.com/docs/installation/docker).
 
-To read more about configuration options, you can visit the [configuration options](https://getmonitess.com/docs/configuration).
+Para mais opções de configuração, acesse as [opções de configuração](https://getmonitess.com/docs/configuration).
 
-## Developer Notice
+## Aviso de Desenvolvedor
 
-> Note: Due to the consistently growing size of the `.git` folder, which was
-> caused by a combination of [yarn offline mirror](https://yarnpkg.com/features/caching#offline-mirror)
-> and [dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide)
-> changes, I had to rewrite the entire history and remove the `.yarn/cache` folder.
-> You can read more about this problem [here](https://github.com/yarnpkg/berry/issues/180)
+> Nota: Devido ao crescente tamanho da pasta `.git`, causado pela combinação
+> de [yarn offline mirror](https://yarnpkg.com/features/caching#offline-mirror)
+> e mudanças do [dependabot](https://docs.github.com/en/code-security/getting-started/dependabot-quickstart-guide),
+> tive que reescrever todo o histórico e remover a pasta `.yarn/cache`.
+> Você pode ler mais sobre este problema [aqui](https://github.com/yarnpkg/berry/issues/180).
 >
-> This resulted in a loss of all forks, which were created before the 18th of
-> March 2025. If you are one of the affected forks, I am sorry for the inconvenience.
-> Please consider re-forking the repository.
+> Isso resultou na perda de todos os forks criados antes de 18 de março de 2025.
+> Se você é um dos afetados, sinto muito pelo inconveniente.
+> Por favor considere refazer o fork do repositório.
