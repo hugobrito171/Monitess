@@ -64,7 +64,7 @@ RUN /bin/echo "{\"version\":\"$VERSION\",\"buildhash\":\"$BUILDHASH\"}" > /app/v
 COPY . ./
 
 RUN \
-  YARN_ENABLE_SCRIPTS=0 yarn install --immutable &&\
+  YARN_ENABLE_SCRIPTS=0 yarn install &&\
   yarn build:prod &&\
   node scripts/strip_package_json.js
 
