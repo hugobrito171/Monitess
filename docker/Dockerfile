@@ -17,6 +17,7 @@ RUN \
     util-linux \
     lm-sensors \
     speedtest-cli &&\
+  corepack enable &&\
   if [ "$TARGETPLATFORM" = "linux/amd64" ] || [ "$(uname -m)" = "x86_64" ]; \
     then \
       /bin/echo ">> installing dependencies (amd64)" &&\
@@ -63,7 +64,7 @@ RUN /bin/echo "{\"version\":\"$VERSION\",\"buildhash\":\"$BUILDHASH\"}" > /app/v
 COPY . ./
 
 RUN \
-  yarn --immutable &&\
+  YARN_ENABLE_SCRIPTS=0 yarn install --immutable &&\
   yarn build:prod &&\
   node scripts/strip_package_json.js
 
@@ -82,6 +83,6 @@ COPY --from=build /app/apps/view/dist view/dist
 COPY --from=build /app/apps/cli/dist cli/dist
 COPY --from=build /app/dist/package.json package.json
 
-RUN yarn
+RUN YARN_ENABLE_SCRIPTS=0 yarn install
 
 CMD ["node", "server/dist/index.cjs"]
