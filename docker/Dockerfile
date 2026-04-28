@@ -43,11 +43,9 @@ FROM base AS dev
 EXPOSE 3001
 EXPOSE 3000
 
-RUN \
-  /bin/echo -e ">> installing dependencies (dev)" &&\
-  apk --no-cache add \
-    git &&\
-  git config --global --add safe.directory /app
+RUN /bin/echo ">> installing dependencies (dev)"
+RUN apk --no-cache add git
+RUN git config --global --add safe.directory /app
 
 # BUILD #
 FROM base AS build
@@ -57,15 +55,10 @@ ARG VERSION
 
 ENV NODE_ENV=production
 
-RUN \
-  /bin/echo -e ">> installing dependencies (build)" &&\
-  apk --no-cache add \
-    git \
-    make \
-    clang \
-    build-base &&\
-  git config --global --add safe.directory /app &&\
-  /bin/echo -e "{\"version\":\"$VERSION\",\"buildhash\":\"$BUILDHASH\"}" > /app/version.json
+RUN /bin/echo ">> installing dependencies (build)"
+RUN apk update && apk --no-cache add git make clang build-base python3
+RUN git config --global --add safe.directory /app
+RUN /bin/echo "{\"version\":\"$VERSION\",\"buildhash\":\"$BUILDHASH\"}" > /app/version.json
 
 COPY . ./
 
